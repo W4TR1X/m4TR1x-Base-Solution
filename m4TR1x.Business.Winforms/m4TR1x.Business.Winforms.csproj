@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>net5.0-windows</TargetFramework>
+      <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\m4TR1x.Business\m4TR1x.Business.csproj" />
+    <ProjectReference Include="..\m4TR1x.Core.Winforms\m4TR1x.Core.Winforms.csproj" />
+  </ItemGroup>
+
+</Project>
