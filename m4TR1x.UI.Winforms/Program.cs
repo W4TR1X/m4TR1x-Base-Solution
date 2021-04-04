@@ -81,6 +81,10 @@ namespace m4TR1x.Ui.Winforms
             builder.RegisterType<DailyMessageService>().As<IDailyMessageService>()
                .SingleInstance();
 
+            //Weater Api Reader Service
+            builder.RegisterType<WeatherApiReaderService>().As<IWeatherApiReaderService>()
+               .SingleInstance();
+
             //Unit Of Work
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
 

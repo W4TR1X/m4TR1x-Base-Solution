@@ -1,5 +1,6 @@
 ﻿using m4TR1x.Business.Interfaces;
 using m4TR1x.Core.Models;
+using m4TR1x.Core.Models.MailService;
 using m4TR1x.Core.Services;
 using System;
 using System.Collections.Generic;

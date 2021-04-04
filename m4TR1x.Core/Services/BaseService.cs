@@ -8,11 +8,11 @@ namespace m4TR1x.Core.Services
 {
     public abstract class BaseService : IDisposable
     {
-        private bool _disposed = false;
+        public bool Disposed { get; private set; }
 
         public void Dispose()
         {
-            if (!_disposed)
+            if (!Disposed)
             {
                 Dispose(true);
                 GC.SuppressFinalize(this);

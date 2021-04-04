@@ -1,4 +1,5 @@
 ﻿using m4TR1x.Core.Models;
+using m4TR1x.Core.Models.MailService;
 using System;
 using System.Collections.Generic;
 using System.Linq;

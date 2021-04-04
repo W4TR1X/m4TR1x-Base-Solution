@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace m4TR1x.Core.Models
+namespace m4TR1x.Core.Models.DailyMessageService
 {
     public class DailyMessageModel
     {
