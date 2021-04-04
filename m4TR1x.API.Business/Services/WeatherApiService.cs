@@ -53,13 +53,14 @@ namespace m4TR1x.API.Business.Services
             {
                 foreach (var day in refModel.Daily)
                 {
-                    var dayRow = new DailyWeatherInfoModel();
-
-                    dayRow.Tempature = day.Tempature;
-                    dayRow.FullImage = null;
-                    dayRow.IconImage = null;
-                    dayRow.IconUrl = day.IconUrl;
-                    dayRow.Info = day.Info;
+                    var dayRow = new DailyWeatherInfoModel
+                    {
+                        Tempature = day.Tempature,
+                        FullImage = null,
+                        IconImage = null,
+                        IconUrl = day.IconUrl,
+                        Info = day.Info
+                    };
 
                     model.Daily.Add(dayRow);
                 }
@@ -92,8 +93,10 @@ namespace m4TR1x.API.Business.Services
 
                     var jsonModel = JsonConvert.DeserializeObject<WeatherJsonModel>(jsonResult, jsonSettings);
 
-                    model.Daily = new List<DailyWeatherInfoModel>();
-                    model.Daily.Add(CreateDailyWeatherInfoFromJsonResult(jsonModel.current));
+                    model.Daily = new List<DailyWeatherInfoModel>
+                    {
+                        CreateDailyWeatherInfoFromJsonResult(jsonModel.current)
+                    };
 
                     foreach (var day in jsonModel.daily)
                     {
