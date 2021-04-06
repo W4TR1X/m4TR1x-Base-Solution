@@ -4,12 +4,13 @@ Base solution implementasyonu
 ## Özellikler
 
 - net 5
-- Autofac
+- Dependency Injection (Autofac)
 - Form Factory
 - Smtp Mail Service (Basit)
 - Daily Message Service (Örnek Servis)
-- Weather API Service (api.openweathermap.org)
+- Weather API Service (api.openweathermap.org) *(m4TR1x.API.Business)*
 - - API projesi kendi üzerinde hava durumunun güncelliğini kontrol etmektedir, grektiğinde (5dk) sunucudan güncel değerleri almaktadır.
+- Weather Api Reader Service *(m4TR1x.Business)*
 - - Winforms üzerindeki weather api reader service API projesine bağlanıp (5dk) güncel durumu istemektedir.
 - Repository Pattern
 - Unit Of Work (EF Core için, şu anlık eklenmedi)
