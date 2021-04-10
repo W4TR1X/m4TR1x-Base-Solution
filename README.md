@@ -12,6 +12,6 @@ Base solution implementasyonu
 - - API projesi kendi üzerinde hava durumunun güncelliğini kontrol etmektedir, grektiğinde (5dk) sunucudan güncel değerleri almaktadır.
 - Weather Api Reader Service *(m4TR1x.Business)*
 - - Servis API projesine bağlanıp (5dk) güncel durumu istemektedir ve event dinleyicilerine göndermektedir.
-- Repository Pattern
+- Generic Repository Pattern
 - Unit Of Work (EF Core için, şu anlık eklenmedi)
 - Winforms ve diğer türleri ayırmak için her katman kendi içerisinde ayrıştırıldı
