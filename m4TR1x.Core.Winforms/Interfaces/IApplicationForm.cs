@@ -13,6 +13,7 @@ namespace m4TR1x.Core.Winforms.Interfaces
         public int Height { get; set; }
 
         public string Name { get; set; }
+        public string Text { get; set; }
 
         public ControlCollection Controls { get; }
 
@@ -27,6 +28,7 @@ namespace m4TR1x.Core.Winforms.Interfaces
 
         public IntPtr Handle { get; }
 
+        public void Close();
         public void Dispose();
     }
 }

@@ -100,6 +100,8 @@ namespace m4TR1x.Ui.Winforms
             builder.RegisterType<DailyMessageForm>();
             builder.RegisterType<WeatherForm>();
             
+            builder.RegisterType<TestForm>();
+
             return builder.Build();
         }
     }

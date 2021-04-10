@@ -146,14 +146,14 @@ namespace m4TR1x.UI.Winforms
             // foreverGroupBox2
             // 
             this.foreverGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foreverGroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox2.BackColor = System.Drawing.Color.White;
             this.foreverGroupBox2.Controls.Add(this.day1Name);
             this.foreverGroupBox2.Controls.Add(this.day1Temp);
             this.foreverGroupBox2.Controls.Add(this.day1Image);
             this.foreverGroupBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.foreverGroupBox2.Location = new System.Drawing.Point(0, 142);
             this.foreverGroupBox2.Name = "foreverGroupBox2";
-            this.foreverGroupBox2.Size = new System.Drawing.Size(97, 147);
+            this.foreverGroupBox2.Size = new System.Drawing.Size(97, 138);
             this.foreverGroupBox2.TabIndex = 0;
             this.foreverGroupBox2.TabStop = false;
             // 
@@ -170,7 +170,7 @@ namespace m4TR1x.UI.Winforms
             // 
             this.day1Temp.Location = new System.Drawing.Point(12, 110);
             this.day1Temp.Name = "day1Temp";
-            this.day1Temp.Size = new System.Drawing.Size(72, 29);
+            this.day1Temp.Size = new System.Drawing.Size(72, 25);
             this.day1Temp.TabIndex = 1;
             this.day1Temp.Text = "0";
             this.day1Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,14 +187,14 @@ namespace m4TR1x.UI.Winforms
             // foreverGroupBox3
             // 
             this.foreverGroupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foreverGroupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox3.BackColor = System.Drawing.Color.White;
             this.foreverGroupBox3.Controls.Add(this.day2Name);
             this.foreverGroupBox3.Controls.Add(this.day2Temp);
             this.foreverGroupBox3.Controls.Add(this.day2Image);
             this.foreverGroupBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.foreverGroupBox3.Location = new System.Drawing.Point(90, 142);
             this.foreverGroupBox3.Name = "foreverGroupBox3";
-            this.foreverGroupBox3.Size = new System.Drawing.Size(97, 147);
+            this.foreverGroupBox3.Size = new System.Drawing.Size(97, 138);
             this.foreverGroupBox3.TabIndex = 0;
             this.foreverGroupBox3.TabStop = false;
             // 
@@ -211,7 +211,7 @@ namespace m4TR1x.UI.Winforms
             // 
             this.day2Temp.Location = new System.Drawing.Point(12, 110);
             this.day2Temp.Name = "day2Temp";
-            this.day2Temp.Size = new System.Drawing.Size(72, 29);
+            this.day2Temp.Size = new System.Drawing.Size(72, 25);
             this.day2Temp.TabIndex = 1;
             this.day2Temp.Text = "0";
             this.day2Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,14 +228,14 @@ namespace m4TR1x.UI.Winforms
             // foreverGroupBox4
             // 
             this.foreverGroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foreverGroupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox4.BackColor = System.Drawing.Color.White;
             this.foreverGroupBox4.Controls.Add(this.day3Name);
             this.foreverGroupBox4.Controls.Add(this.day3Temp);
             this.foreverGroupBox4.Controls.Add(this.day3Image);
             this.foreverGroupBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.foreverGroupBox4.Location = new System.Drawing.Point(180, 142);
             this.foreverGroupBox4.Name = "foreverGroupBox4";
-            this.foreverGroupBox4.Size = new System.Drawing.Size(97, 147);
+            this.foreverGroupBox4.Size = new System.Drawing.Size(97, 138);
             this.foreverGroupBox4.TabIndex = 0;
             this.foreverGroupBox4.TabStop = false;
             // 
@@ -252,7 +252,7 @@ namespace m4TR1x.UI.Winforms
             // 
             this.day3Temp.Location = new System.Drawing.Point(12, 110);
             this.day3Temp.Name = "day3Temp";
-            this.day3Temp.Size = new System.Drawing.Size(72, 29);
+            this.day3Temp.Size = new System.Drawing.Size(72, 25);
             this.day3Temp.TabIndex = 1;
             this.day3Temp.Text = "0";
             this.day3Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,14 +269,14 @@ namespace m4TR1x.UI.Winforms
             // foreverGroupBox5
             // 
             this.foreverGroupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foreverGroupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox5.BackColor = System.Drawing.Color.White;
             this.foreverGroupBox5.Controls.Add(this.day4Name);
             this.foreverGroupBox5.Controls.Add(this.day4Temp);
             this.foreverGroupBox5.Controls.Add(this.day4Image);
             this.foreverGroupBox5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.foreverGroupBox5.Location = new System.Drawing.Point(270, 142);
             this.foreverGroupBox5.Name = "foreverGroupBox5";
-            this.foreverGroupBox5.Size = new System.Drawing.Size(97, 147);
+            this.foreverGroupBox5.Size = new System.Drawing.Size(97, 138);
             this.foreverGroupBox5.TabIndex = 0;
             this.foreverGroupBox5.TabStop = false;
             // 
@@ -293,7 +293,7 @@ namespace m4TR1x.UI.Winforms
             // 
             this.day4Temp.Location = new System.Drawing.Point(12, 110);
             this.day4Temp.Name = "day4Temp";
-            this.day4Temp.Size = new System.Drawing.Size(72, 29);
+            this.day4Temp.Size = new System.Drawing.Size(72, 25);
             this.day4Temp.TabIndex = 1;
             this.day4Temp.Text = "0";
             this.day4Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -310,14 +310,14 @@ namespace m4TR1x.UI.Winforms
             // foreverGroupBox6
             // 
             this.foreverGroupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foreverGroupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox6.BackColor = System.Drawing.Color.White;
             this.foreverGroupBox6.Controls.Add(this.day5Name);
             this.foreverGroupBox6.Controls.Add(this.day5Temp);
             this.foreverGroupBox6.Controls.Add(this.day5Image);
             this.foreverGroupBox6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.foreverGroupBox6.Location = new System.Drawing.Point(360, 142);
             this.foreverGroupBox6.Name = "foreverGroupBox6";
-            this.foreverGroupBox6.Size = new System.Drawing.Size(97, 147);
+            this.foreverGroupBox6.Size = new System.Drawing.Size(97, 138);
             this.foreverGroupBox6.TabIndex = 0;
             this.foreverGroupBox6.TabStop = false;
             // 
@@ -334,7 +334,7 @@ namespace m4TR1x.UI.Winforms
             // 
             this.day5Temp.Location = new System.Drawing.Point(12, 110);
             this.day5Temp.Name = "day5Temp";
-            this.day5Temp.Size = new System.Drawing.Size(72, 29);
+            this.day5Temp.Size = new System.Drawing.Size(72, 25);
             this.day5Temp.TabIndex = 1;
             this.day5Temp.Text = "0";
             this.day5Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,14 +351,14 @@ namespace m4TR1x.UI.Winforms
             // foreverGroupBox7
             // 
             this.foreverGroupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foreverGroupBox7.BackColor = System.Drawing.Color.Transparent;
+            this.foreverGroupBox7.BackColor = System.Drawing.Color.White;
             this.foreverGroupBox7.Controls.Add(this.day6Name);
             this.foreverGroupBox7.Controls.Add(this.day6Temp);
             this.foreverGroupBox7.Controls.Add(this.day6Image);
             this.foreverGroupBox7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.foreverGroupBox7.Location = new System.Drawing.Point(450, 142);
             this.foreverGroupBox7.Name = "foreverGroupBox7";
-            this.foreverGroupBox7.Size = new System.Drawing.Size(97, 147);
+            this.foreverGroupBox7.Size = new System.Drawing.Size(97, 138);
             this.foreverGroupBox7.TabIndex = 0;
             this.foreverGroupBox7.TabStop = false;
             // 
@@ -375,7 +375,7 @@ namespace m4TR1x.UI.Winforms
             // 
             this.day6Temp.Location = new System.Drawing.Point(12, 110);
             this.day6Temp.Name = "day6Temp";
-            this.day6Temp.Size = new System.Drawing.Size(72, 29);
+            this.day6Temp.Size = new System.Drawing.Size(72, 25);
             this.day6Temp.TabIndex = 1;
             this.day6Temp.Text = "0";
             this.day6Temp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
