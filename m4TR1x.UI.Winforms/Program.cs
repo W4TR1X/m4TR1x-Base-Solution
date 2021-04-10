@@ -11,6 +11,10 @@ using Autofac;
 using System;
 using m4TR1x.Business.Services;
 using m4TR1x.Business.Interfaces;
+using m4TR1x.Core.Winforms.Interfaces;
+using m4TR1x.UI.Winforms;
+using m4TR1x.Core.Api.Interfaces;
+using m4TR1x.Core.Api.Services;
 
 namespace m4TR1x.Ui.Winforms
 {
@@ -85,12 +89,17 @@ namespace m4TR1x.Ui.Winforms
             builder.RegisterType<WeatherApiReaderService>().As<IWeatherApiReaderService>()
                .SingleInstance();
 
+            builder.RegisterGeneric(typeof(ApiHelperService<>))
+               .As(typeof(IApiHelperService<>));
+
             //Unit Of Work
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
 
             //Appliction main form
             builder.RegisterType<MainForm>();
-
+            builder.RegisterType<DailyMessageForm>();
+            builder.RegisterType<WeatherForm>();
+            
             return builder.Build();
         }
     }

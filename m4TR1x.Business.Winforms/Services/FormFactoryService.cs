@@ -29,6 +29,11 @@ namespace m4TR1x.Business.Winforms.Services
             return Forms.OfType<FormType>().FirstOrDefault();
         }
 
+        public IList<FormType> GetForms<FormType>() where FormType : IApplicationForm
+        {
+            return Forms.OfType<FormType>().ToList();
+        }
+
         public FormType CreateForm<FormType>() where FormType : IApplicationForm
         {
             var instance = _componentContext.Resolve<FormType>();
@@ -45,11 +50,11 @@ namespace m4TR1x.Business.Winforms.Services
 
         void setupForm(IApplicationForm instance)
         {
-            if (!Forms.Contains(instance))
-            {
-                Forms.Add(instance);
-                instance.Disposed += formDisposed;
-            }
+            //if (!Forms.Contains(instance))
+            //{
+            Forms.Add(instance);
+            instance.Disposed += formDisposed;
+            //}
         }
 
         public bool DestroyForm(IApplicationForm instance)

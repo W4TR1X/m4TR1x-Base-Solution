@@ -12,6 +12,7 @@ namespace m4TR1x.Business.Winforms.Interfaces
         public List<IApplicationForm> Forms { get; set; }
 
         FormType GetForm<FormType>() where FormType : IApplicationForm;
+        IList<FormType> GetForms<FormType>() where FormType : IApplicationForm;
 
         FormType GetOrCreateForm<FormType>() where FormType : IApplicationForm;
 

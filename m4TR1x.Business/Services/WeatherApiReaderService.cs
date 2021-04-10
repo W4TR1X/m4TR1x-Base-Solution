@@ -1,4 +1,5 @@
 ﻿using m4TR1x.Business.Interfaces;
+using m4TR1x.Core.Api.Interfaces;
 using m4TR1x.Core.Extensions;
 using m4TR1x.Core.Helpers;
 using m4TR1x.Core.Models.WeatherApiService;
@@ -16,14 +17,17 @@ namespace m4TR1x.Business.Services
 {
     public class WeatherApiReaderService : BaseService, IWeatherApiReaderService
     {
-        public WeatherResultModel CurrentWeather => getWeather();
+        private readonly IApiHelperService<WeatherModel> _apiService;
 
+        public WeatherResultModel CurrentWeather => getWeather();
         WeatherResultModel _currentWeather;
 
         public event IWeatherApiReaderService.WeatherUpdatedDelegate WeatherUpdated;
 
-        public WeatherApiReaderService()
+        public WeatherApiReaderService(IApiHelperService<WeatherModel> apiService)
         {
+            _apiService = apiService;  
+
             Task.Run(() =>
             {
                 while (WeatherUpdated == null)
@@ -48,8 +52,8 @@ namespace m4TR1x.Business.Services
                     }
                 };
             });
-
         }
+
         WeatherResultModel getWeather()
         {
             if (_currentWeather == null || (DateTime.Now - _currentWeather.LastUpdateDate).Minutes > 5)
@@ -62,37 +66,62 @@ namespace m4TR1x.Business.Services
 
         WeatherResultModel loadWeather()
         {
-            try
+            //try
+            //{
+            //    var jsonResult = ApiHelper.GetJsonFromApi(PathHelper.HTTP_SERVER_PATH + @"/api/weatherapi/getcurrentweatherinfo");
+
+            //    if (jsonResult != null)
+            //    {
+            //        var weatherResult = JsonConvert.DeserializeObject<WeatherModel>(jsonResult);
+
+            //        _currentWeather = new WeatherResultModel()
+            //        {
+            //            Daily = new List<DailyWeatherInfoResultModel>(),
+            //            IsCorrect = weatherResult.IsCorrect,
+            //            LastUpdateDate = weatherResult.LastUpdateDate
+            //        };
+
+            //        foreach (var day in weatherResult.Daily)
+            //        {
+            //            _currentWeather.Daily.Add(new DailyWeatherInfoResultModel()
+            //            {
+            //                FullImage = day.FullImage.AsImage(),
+            //                IconImage = day.IconImage.AsImage(),
+            //                IconUrl = day.IconUrl,
+            //                Info = day.Info,
+            //                Tempature = day.Tempature
+            //            });
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{ 
+
+            //}
+
+            var apiResult = _apiService.Get(PathHelper.HTTP_SERVER_PATH + @"/api/weatherapi/getcurrentweatherinfo");
+            if (apiResult.IsSuccess)
             {
-                var jsonResult = ApiHelper.GetJsonFromApi(PathHelper.HTTP_SERVER_PATH + @"/api/weatherapi/getcurrentweatherinfo");
+                var weatherResult = apiResult.Result;
 
-                if (jsonResult != null)
+                _currentWeather = new WeatherResultModel()
                 {
-                    var weatherResult = JsonConvert.DeserializeObject<WeatherModel>(jsonResult);
+                    Daily = new List<DailyWeatherInfoResultModel>(),
+                    IsCorrect = weatherResult.IsCorrect,
+                    LastUpdateDate = weatherResult.LastUpdateDate
+                };
 
-                    _currentWeather = new WeatherResultModel()
+                foreach (var day in weatherResult.Daily)
+                {
+                    _currentWeather.Daily.Add(new DailyWeatherInfoResultModel()
                     {
-                        Daily = new List<DailyWeatherInfoResultModel>(),
-                        IsCorrect = weatherResult.IsCorrect,
-                        LastUpdateDate = weatherResult.LastUpdateDate
-                    };
-
-                    foreach (var day in weatherResult.Daily)
-                    {
-                        _currentWeather.Daily.Add(new DailyWeatherInfoResultModel()
-                        {
-                            FullImage = day.FullImage.AsImage(),
-                            IconImage = day.IconImage.AsImage(),
-                            IconUrl = day.IconUrl,
-                            Info = day.Info,
-                            Tempature = day.Tempature
-                        });
-                    }
+                        FullImage = day.FullImage.AsImage(),
+                        IconImage = day.IconImage.AsImage(),
+                        IconUrl = day.IconUrl,
+                        Info = day.Info,
+                        Tempature = day.Tempature
+                    });
                 }
-            }
-            catch (Exception)
-            { 
-            
             }
 
             return _currentWeather;
